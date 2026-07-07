@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --paper: #FFF7F1;      /* papel cálido, no el crema genérico */
+  --paper-2: #FBEDE3;    /* papel un poco más rosado, para tarjetas */
+  --wine: #7A2E3B;       /* acento principal, vino/borgoña */
+  --rose: #C9707E;       /* acento secundario, rosa suave */
+  --gold: #C9974B;       /* acento especial: compromisos */
+  --ink: #3A2A2E;        /* texto principal, marrón muy oscuro, no negro puro */
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+
+/* Tarjeta estilo "polaroid" pegada con washi tape: el elemento firma del proyecto */
+.polaroid {
+  background: #fff;
+  padding: 0.75rem 0.75rem 2.25rem 0.75rem;
+  box-shadow: 0 10px 25px -8px rgba(58, 42, 46, 0.35);
+  position: relative;
+}
+
+.tape {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 70px;
+  height: 26px;
+  background: rgba(201, 151, 75, 0.55);
+  border: 1px solid rgba(201, 151, 75, 0.3);
+}
+
+/* Borde de "papel rasgado" sutil para separar secciones */
+.torn-edge {
+  clip-path: polygon(
+    0% 4%, 4% 0%, 12% 3%, 20% 0%, 28% 4%, 36% 1%, 44% 3%, 52% 0%,
+    60% 4%, 68% 1%, 76% 3%, 84% 0%, 92% 4%, 100% 1%, 100% 100%, 0% 100%
+  );
+}
